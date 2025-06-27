@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portpholiyo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6909eb86b5.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var myForm = document.getElementById('myForm');
+
+            myForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                axios.post('https://api.web3forms.com/submit', new FormData(myForm))
+                    .then(function (response) {
+                        console.log(response.data);
+                        alert('Form submitted successfully!');
+                        myForm.reset();
+                    })
+                    .catch(function (error) {
+                        console.error(error);
+                    });
+            });
+        });
+    </script>
+</head>
+<body>
+  
+    
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="./personal-portfolio-img/images/keerthi_logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header" >Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">My Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+     <div class="header-text">
+        <h1>Hi, I'm <br><span>Gurivelli Keerthi</span></h1>
+        <!-- <img src="./personal-portfolio-img/images/background.jpg" alt="Background Image" class="header-image"> -->
+     </div>
+
+    </div>
+</div>
+<!---------Abut------- ----------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="./personal-portfolio-img/images/profile.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Motivated computer science undergraduate with hands-on experience in building full-stack web applications
+                using React, Django, MongoDB, and AWS. Skilled in developing scalable projects with user authentication,
+                RESTful APIs, and responsive UI. Passionate about solving real-world problems through efficient solutions.</p>
+                  <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <!-- <p class="tab-links" onclick="opentab('experience')">Experience</p> -->
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                  </div>
+                  <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Languages</span><br>C, Python, JavaScript, Java, SQL, PHP</li>
+                        <li><span>Libraries/ Frameworks</span><br>Reactjs, Expressjs, Mongoose, Boostrap, Django, Flask</li>
+                        <li><span>Database</span><br>MySQL, MongoDb</li>
+                        <li><span>Tools</span><br>Git/Github, Postman, VScode, MongoDB Atlas / Compass</li>
+                    </ul>
+                  </div>
+                  <!-- <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2021 - current</span><br>Ui/UX Design Training at ET Institute </li>
+                        <li><span>2021 - 2022</span><br>Team Lead at StarApp LLC.</li>
+                        <li><span>2020 - 2021</span><br>UI/UX Design Executive at Coin Digital Ltd.</li>
+                        <li><span>2020</span><br>Internship at ekart eCommerce.</li>
+                    </ul>
+                  </div> -->
+                  <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022 - 2026</span><br>GMR Institute of Technology, Rajam<br><span class="btech" style="color: #ababab;">B.Tech, Computer Science And Engineering &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CGPA: 9.7</span></li>
+                        <!-- <li><span>2017 - 2019</span><br>Narayana Junior College<br><span class="btech" style="color: #ababab;">Intermediate, MPC
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CGPA:
+                            9.54</span></li>
+                        <li><span>2012 - 2017</span><br>Viswasanthi High School<br><span class="btech" style="color: #ababab;">State Secondary Education
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GPA:
+                            9.7</span></li> -->
+                    </ul>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--------------Services------->
+<!-- <div class="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+                     soluta temporibus quas quo commodi! Debitis, ab veritatis, 
+                    porro tempora aut quis quod suscipit inventore dignissimos explicabo 
+                    deleniti numquam doloremque ipsa.</p>
+                    <a href="#">learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>UI/UX Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+                     soluta temporibus quas quo commodi! Debitis, ab veritatis, 
+                    porro tempora aut quis quod suscipit inventore dignissimos explicabo 
+                    deleniti numquam doloremque ipsa.</p>
+                    <a href="#">learn More</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+                     soluta temporibus quas quo commodi! Debitis, ab veritatis, 
+                    porro tempora aut quis quod suscipit inventore dignissimos explicabo 
+                    deleniti numquam doloremque ipsa.</p>
+                    <a href="#">learn More</a>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!--------------------portpoliyo------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+            <img src="./personal-portfolio-img/images/mcq.png">
+            <div class="layer">     
+                <h3>Platform for MCQ-Based Coding Contests</h3>
+                <p>Built a secure, scalable web app for MCQ-based coding contests with Google OAuth, role-based access, and one-attempt
+                enforcement. Included real-time leaderboards, time zone-based scheduling, and an admin dashboard for contest management
+                and result tracking.
+                </p>
+                    <a href="https://github.com/keerthi93-s/mcq-contest-platform"><i class="fa-brands fa-2x fa-github"></i></a>
+                    <!-- <a href="https://job-recommender-system-zxvacghfjtwqctmwcn6xqi.streamlit.app/"><i class="fa-solid fa-2x fa-up-right-from-square"></i></a>   -->
+            </div>
+            </div>
+            <div class="work">
+            <img src="./personal-portfolio-img/images/task_distributer.jpeg">
+            <div class="layer">
+                <h3>Agent -task-distribute</h3>
+                <p>
+                Built an agent task distribution system featuring admin authentication, CSV/Excel file processing, and automated task
+                assignment across multiple agents with full CRUD management capabilities. Developed a responsive web dashboard that
+                allows administrators to upload task files, manage agent profiles, and automatically distribute workload entries through
+                an intuitive and user-friendly interface.
+                </p>
+                    <a href="https://github.com/keerthi93-s/agent-task-distributor/tree/master"><i class="fa-brands fa-2x fa-github"></i></a>
+            </div>
+            </div>
+            <div class="work">
+                <img src="./personal-portfolio-img/images/food_order.png">
+                <div class="layer">
+                    <h3>Food Order App</h3>
+                    <p>
+                Developed a scalable food ordering application using React, with modular components such as meal cards, cart items, and
+                order forms to ensure maintainability and reusability. Managed HTTP requests for backend communication and leveraged the
+                React Context API to handle both local and global state, enabling efficient cart updates and seamless interactions
+                across components for a smooth user order experience.
+                    </p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="./personal-portfolio-img/images/ming_sweeper_game.jpg">
+                <div class="layer">
+                    <h3>Mine Sweeper game</h3>
+                    <p>
+                        Built a web-based Minesweeper game featuring a custom CSS seven segment timer to track gameplay time.
+                        Used Depth-First Search (DFS) to efficiently reveal cells and compute adjacent mine counts.
+                    </p>
+                    <a href="https://github.com/keerthi93-s/minesweeper-game"><i class="fa-brands fa-2x fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------contact Us--------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">contact Me</h1>
+                <p></p>
+                <p></i></p>
+                    <a id="contactLink" href="mailto: keerthigurivelli05@gmail.com" style="color: aliceblue; text-decoration: none">
+                        <p><i class="fa-solid fa-paper-plane"></i>keerthigurivelli05@gmail.com</p>
+                    </a>
+                <p><i class="fa-solid fa-phone"></i>+9181254 66221</p>
+                <!-------Social icons-------------->
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/keerthi-gurivelli-969a54268/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/keerthi93-s/"><i class="fa-brands fa-github"></i></a>
+                </div>
+
+                <!--------------Resume ----------->
+                <a href="./GURIVELLI_KEERTHI_RESUME.pdf" Download class="btn btn2">Download CV </a>
+            </div>
+                <div class="contact-right">
+                <!------------- contact form----------------->
+                    <form id="myForm" name="submit-to-google-sheet">
+                        <input type="hidden" name="access_key" value="c1fcb06b-7de0-4aa5-9efe-bf593e395cbf">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" id="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+
+                 <span id="msg"></span>
+                </div>
+        </div>
+    </div>
+
+
+    <div class="copyright">
+        
+    </div>
+</div>
+
+<!--------------------javascript------->
+<script>
+    document.getElementById('contactLink').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the default action of following the link
+        window.location.href = 'mailto:keerthigurivelli05@gmail.com'; // Open the mailto link
+    });
+</script>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        closemenu.style.right="-200";
+    }
+</script>
+
+
+</body>
+</html>
