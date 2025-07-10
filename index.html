@@ -27,195 +27,278 @@
     </script>
 </head>
 <body>
+    <!-- Background Elements -->
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    
+    <div class="corner-accent top-left"></div>
+    <div class="corner-accent bottom-right"></div>
   
     
-<div id="header">
-    <div class="container">
-        <nav>
+    <!-- Fixed Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
             <img src="./personal-portfolio-img/images/keerthi_logo.png" class="logo">
             <ul id="sidemenu">
-                <li><a href="#header" >Home</a></li>
+                <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">My Work</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
-     <div class="header-text">
-        <h1>Hi, I'm <br><span>Gurivelli Keerthi</span></h1>
-        <!-- <img src="./personal-portfolio-img/images/background.jpg" alt="Background Image" class="header-image"> -->
-     </div>
+        </div>
+    </nav>
 
-    </div>
-</div>
-<!---------Abut------- ----------->
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="./personal-portfolio-img/images/profile.png">
+    <!-- Hero Section -->
+    <div id="header" class="hero-section">
+        <div class="container hero-container">
+            <div class="header-text">
+                <h1>Gurivelli Keerthi</h1>
+                <h2 class="subtitle">I am a <span class="highlight">Full Stack Developer</span></h2>
             </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>Motivated computer science undergraduate with hands-on experience in building full-stack web applications
-                using React, Django, MongoDB, and AWS. Skilled in developing scalable projects with user authentication,
-                RESTful APIs, and responsive UI. Passionate about solving real-world problems through efficient solutions.</p>
-                  <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <!-- <p class="tab-links" onclick="opentab('experience')">Experience</p> -->
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                  </div>
-                  <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Languages</span><br>C, Python, JavaScript, Java, SQL, PHP</li>
-                        <li><span>Libraries/ Frameworks</span><br>Reactjs, Expressjs, Mongoose, Boostrap, Django, Flask</li>
-                        <li><span>Database</span><br>MySQL, MongoDb</li>
-                        <li><span>Tools</span><br>Git/Github, Postman, VScode, MongoDB Atlas / Compass</li>
-                    </ul>
-                  </div>
-                  <!-- <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>2021 - current</span><br>Ui/UX Design Training at ET Institute </li>
-                        <li><span>2021 - 2022</span><br>Team Lead at StarApp LLC.</li>
-                        <li><span>2020 - 2021</span><br>UI/UX Design Executive at Coin Digital Ltd.</li>
-                        <li><span>2020</span><br>Internship at ekart eCommerce.</li>
-                    </ul>
-                  </div> -->
-                  <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>2022 - 2026</span><br>GMR Institute of Technology, Rajam<br><span class="btech" style="color: #ababab;">B.Tech, Computer Science And Engineering &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CGPA: 9.7</span></li>
-                        <!-- <li><span>2017 - 2019</span><br>Narayana Junior College<br><span class="btech" style="color: #ababab;">Intermediate, MPC
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CGPA:
-                            9.54</span></li>
-                        <li><span>2012 - 2017</span><br>Viswasanthi High School<br><span class="btech" style="color: #ababab;">State Secondary Education
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GPA:
-                            9.7</span></li> -->
-                    </ul>
-                  </div>
+        </div>
+        <!-- Scroll Indicator at the bottom of hero -->
+        <div class="scroll-indicator" id="scroll-indicator-hero">
+            <span>Scroll to explore</span>
+            <div class="scroll-dot"></div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./personal-portfolio-img/images/profile.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Motivated computer science undergraduate with hands-on experience in building full-stack web applications
+                    using React, Django, MongoDB, and AWS. Skilled in developing scalable projects with user authentication,
+                    RESTful APIs, and responsive UI. Passionate about solving real-world problems through efficient solutions.</p>
+                      <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                      </div>
+                      <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages</span><br>C, Python, JavaScript, Java, SQL, PHP</li>
+                            <li><span>Libraries/ Frameworks</span><br>Reactjs, Expressjs, Mongoose, Bootstrap, Django, Flask</li>
+                            <li><span>Database</span><br>MySQL, MongoDb</li>
+                            <li><span>Tools</span><br>Git/Github, Postman, VScode, MongoDB Atlas / Compass</li>
+                        </ul>
+                      </div>
+                      <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - 2026</span><br>GMR Institute of Technology, Rajam<br><span class="btech" style="color: #ababab;">B.Tech, Computer Science And Engineering &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CGPA: 9.7</span></li>
+                        </ul>
+                        <ul>
+                            <li><span>2020 - 2022</span><br>Narayana Junior College , Vishakapatnam<br><span class="btech" style="color: #ababab;">Intermediate, M.P.C &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; percentage: 94.7%</span></li>
+                        </ul>
+                        
+                      </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-
-
-
-<!--------------Services------->
-<!-- <div class="services">
-    <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Web Design</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-                     soluta temporibus quas quo commodi! Debitis, ab veritatis, 
-                    porro tempora aut quis quod suscipit inventore dignissimos explicabo 
-                    deleniti numquam doloremque ipsa.</p>
-                    <a href="#">learn More</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-crop-simple"></i>
-                <h2>UI/UX Design</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-                     soluta temporibus quas quo commodi! Debitis, ab veritatis, 
-                    porro tempora aut quis quod suscipit inventore dignissimos explicabo 
-                    deleniti numquam doloremque ipsa.</p>
-                    <a href="#">learn More</a>
-            </div>
-            <div>
-                <i class="fa-brands fa-app-store"></i>
-                <h2>App Design</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-                     soluta temporibus quas quo commodi! Debitis, ab veritatis, 
-                    porro tempora aut quis quod suscipit inventore dignissimos explicabo 
-                    deleniti numquam doloremque ipsa.</p>
-                    <a href="#">learn More</a>
+    <!-- Experience Section -->
+    <div id="experience" class="section">
+        <div class="container">
+            <h1 class="sub-title">Experience</h1>
+            <div class="experience-list">
+                <div class="experience-card">
+                    <h3>Hash Tek Solutions</h3>
+                    <span class="exp-role">Cloud Intern</span>
+                    <span class="exp-duration"><span class="exp-date-icon"><i class="fa-regular fa-calendar"></i></span>May 2023 - July 2023</span>
+                    <span class="exp-tools">AWS, EC2, S3, VPC, ELB, EBS</span>
+                    <div class="exp-desc">Gained hands-on experience with AWS Cloud Services by creating and managing EC2 instances, designing VPC architectures, and deploying static websites using Amazon S3 for high availability. Configured and managed Elastic Load Balancers (ELB) and EBS volumes, building a solid foundation in cloud infrastructure, networking, and deployment workflows.</div>
+                    <!-- <a href="#" class="btn btn2"><i class="fa-regular fa-file-lines"></i>View Certificate</a> -->
+                </div>
             </div>
         </div>
+        <div class="scroll-indicator" id="scroll-indicator-experience">
+            <span>Scroll to explore</span>
+            <div class="scroll-dot"></div>
+        </div>
     </div>
-</div> -->
 
-<!--------------------portpoliyo------->
-<div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-            <div class="work">
-            <img src="./personal-portfolio-img/images/mcq.png">
-            <div class="layer">     
-                <h3>Platform for MCQ-Based Coding Contests</h3>
-                <p>Built a secure, scalable web app for MCQ-based coding contests with Google OAuth, role-based access, and one-attempt
-                enforcement. Included real-time leaderboards, time zone-based scheduling, and an admin dashboard for contest management
-                and result tracking.
-                </p>
-                    <a href="https://github.com/keerthi93-s/mcq-contest-platform"><i class="fa-brands fa-2x fa-github"></i></a>
-                    <!-- <a href="https://job-recommender-system-zxvacghfjtwqctmwcn6xqi.streamlit.app/"><i class="fa-solid fa-2x fa-up-right-from-square"></i></a>   -->
-            </div>
-            </div>
-            <div class="work">
-            <img src="./personal-portfolio-img/images/task_distributer.jpeg">
-            <div class="layer">
-                <h3>Agent -task-distribute</h3>
-                <p>
-                Built an agent task distribution system featuring admin authentication, CSV/Excel file processing, and automated task
-                assignment across multiple agents with full CRUD management capabilities. Developed a responsive web dashboard that
-                allows administrators to upload task files, manage agent profiles, and automatically distribute workload entries through
-                an intuitive and user-friendly interface.
-                </p>
-                    <a href="https://github.com/keerthi93-s/agent-task-distributor/tree/master"><i class="fa-brands fa-2x fa-github"></i></a>
-            </div>
-            </div>
-            <div class="work">
-                <img src="./personal-portfolio-img/images/food_order.png">
-                <div class="layer">
+    <!-- Projects Section (modern) -->
+    <div id="projects" class="section">
+        <div class="container">
+            <h1 class="sub-title section-gradient">Projects</h1>
+            <div class="project-list">
+                <div class="project-card">
+                    <span class="project-icon"><i class="fa-solid fa-code"></i></span>
+                    <img src="personal-portfolio-img/images/tic-tac.png" alt="Tic-Tac-Toe" class="project-image" />
+                    <h3>Tic-Tac-Toe game</h3>
+                    <div class="project-desc">Developed an interactive Tic-Tac-Toe game using React and Vite, implementing dynamic state management with lifting state up between components, event handling, and optimized performance for a responsive UI.
+                      </div>
+                    <div class="project-tech-list">
+                        <span class="project-tech">React</span>
+                        <span class="project-tech">Vite</span>
+                       
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/keerthi93-s/Tic-tac-Toe-React.git" class="project-link github-btn" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
+                        <a href="https://tic-tac-toe-react-ivory-eight.vercel.app/" class="project-link demo-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>Live Demo</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <span class="project-icon"><i class="fa-solid fa-gamepad"></i></span>
+                    <img src="personal-portfolio-img/images/ming_sweeper_game.png" alt="Ming Sweeper Game" class="project-image" />
+                    <h3>Mine Sweeper Game</h3>
+                    <div class="project-desc">A modern take on Minesweeper with custom levels, animations, and sound effects. Built using JavaScript and Canvas API.</div>
+                    <div class="project-tech-list">
+                        <span class="project-tech">JavaScript</span>
+                        <span class="project-tech">CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/keerthi93-s/minesweeper-game" class="project-link github-btn" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
+                        <a href="https://keerthi93-s.github.io/mine-sweeper-game/" class="project-link demo-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="project-icon"><i class="fa-solid fa-gamepad"></i></span>
+                    <img src="personal-portfolio-img/images/stopClock.png" alt="Ming Sweeper Game" class="project-image" />
+                    <h3>Stop the Clock</h3>
+                    <div class="project-desc">Stop the Clock is a fun and interactive React game where players test their sense of timing. The goal is to stop a countdown timer as close as possible to a target time.</div>
+                    <div class="project-tech-list">
+                        <span class="project-tech">React</span>
+                        
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/keerthi93-s/Stop-the-Clock.git" class="project-link github-btn" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
+                        <a href="stop-the-clock-e6qcsqa02-gurivelli-keerthis-projects.vercel.app" class="project-link demo-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="project-icon"><i class="fa-solid fa-list-check"></i></span>
+                    <img src="personal-portfolio-img/images/task_distributer.jpeg" alt="Task Distributor" class="project-image" />
+                    <h3>Task Distributor</h3>
+                    <div class="project-desc">A productivity tool for assigning and tracking tasks within teams. Features drag-and-drop UI and real-time notifications. Built with Vue.js and Node.js.</div>
+                    <div class="project-tech-list">
+                        <span class="project-tech">Vue.js</span>
+                        <span class="project-tech">Node.js</span>
+                        <span class="project-tech">JavaScript</span>
+        
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/keerthi93-s/agent-task-distributor/tree/master" class="project-link github-btn" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
+                        <a href="#" class="project-link demo-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="project-icon"><i class="fa-solid fa-code"></i></span>
+                    <img src="personal-portfolio-img/images/mcq.png" alt="MCQ Contest Platform" class="project-image" />
+                    <h3>Platform for MCQ-Based Coding Contests</h3>
+                    <div class="project-desc">Built a secure, scalable web app for MCQ-based coding contests with Google OAuth, role-based access. Included real-time leaderboards,and an admin dashboard for contest management.</div>
+                    <div class="project-tech-list">
+                        
+                        <span class="project-tech">MongoDB</span>
+                        <span class="project-tech">Google OAuth</span>
+                        <span class="project-tech">Django</span>
+                       
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/keerthi93-s/mcq-contest-platform" class="project-link github-btn" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
+                        <a href="#" class="project-link demo-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="project-icon"><i class="fa-solid fa-code"></i></span>
+                    <img src="personal-portfolio-img/images/food_order.png" alt="Food Order App" class="project-image" />
                     <h3>Food Order App</h3>
-                    <p>
-                Developed a scalable food ordering application using React, with modular components such as meal cards, cart items, and
-                order forms to ensure maintainability and reusability. Managed HTTP requests for backend communication and leveraged the
-                React Context API to handle both local and global state, enabling efficient cart updates and seamless interactions
-                across components for a smooth user order experience.
-                    </p>
-                </div>
-            </div>
-            <div class="work">
-                <img src="./personal-portfolio-img/images/ming_sweeper_game.jpg">
-                <div class="layer">
-                    <h3>Mine Sweeper game</h3>
-                    <p>
-                        Built a web-based Minesweeper game featuring a custom CSS seven segment timer to track gameplay time.
-                        Used Depth-First Search (DFS) to efficiently reveal cells and compute adjacent mine counts.
-                    </p>
-                    <a href="https://github.com/keerthi93-s/minesweeper-game"><i class="fa-brands fa-2x fa-github"></i></a>
+                    <div class="project-desc">A responsive web app for ordering food online, featuring real-time menu updates, cart, and order tracking. Built with React and Firebase.</div>
+                    <div class="project-tech-list">
+                        <span class="project-tech">React</span>
+                        <span class="project-tech">Firebase</span>
+                        <span class="project-tech">JavaScript</span>
+
+                    </div>
+                    <!-- <div class="project-links">
+                        <a href="" class="project-link github-btn" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
+                        <a href="#" class="project-link demo-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>Live Demo</a> -->
+                    <!-- </div> -->
                 </div>
             </div>
         </div>
+        <div class="scroll-indicator" id="scroll-indicator-projects">
+            <span>Scroll to explore</span>
+            <div class="scroll-dot"></div>
+        </div>
     </div>
-</div>
-<!-------------contact Us--------------------------->
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">contact Me</h1>
-                <p></p>
-                <p></i></p>
+
+    <!-- Certifications Section -->
+    <div id="certifications" class="section">
+        <div class="container">
+            <h1 class="sub-title section-gradient">Certifications</h1>
+            <div class="cert-list">
+                <div class="cert-card">
+                    <i class="fa-solid fa-certificate cert-icon"></i>
+                    <h3>Introduction to Software Engineering</h3>
+                    <div class="cert-source">Coursera</div>
+                    <span class="cert-date">Issued Feb 2025</span>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/ZUAI5Y2EWHWJ" class="view-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i>View Certificate</a>
+                </div>
+                <div class="cert-card">
+                    <i class="fa-solid fa-certificate cert-icon"></i>
+                    <h3>Object Oriented Programming in Java</h3>
+                    <div class="cert-source">Coursera</div>
+                    <span class="cert-date">Issued Jan 2024</span>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/WMS277ZD5F5E" class="view-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i>View Certificate</a>
+                </div>
+                 <div class="cert-card">
+                    <i class="fa-solid fa-certificate cert-icon"></i>
+                    <h3>SQL(Intermediate)</h3>
+                    <div class="cert-source">hackerrank</div>
+                    <span class="cert-date">Issued Apr 2024</span>
+                    <a href="https://www.hackerrank.com/certificates/bd204127770f" class="view-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i>View Certificate</a>
+                </div>
+                
+                <div class="cert-card">
+                    <i class="fa-solid fa-certificate cert-icon"></i>
+                    <h3>AWS Academy Graduate</h3>
+                    <div class="cert-source"> AWS Academy Cloud Foundations</div>
+                    <span class="cert-date">Issued Oct 2024</span>
+                    <a href="#" class="view-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i>View Certificate</a>
+                </div>
+                 
+                
+                
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scroll-indicator-certifications">
+            <span>Scroll to explore</span>
+            <div class="scroll-dot"></div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
                     <a id="contactLink" href="mailto: keerthigurivelli05@gmail.com" style="color: aliceblue; text-decoration: none">
                         <p><i class="fa-solid fa-paper-plane"></i>keerthigurivelli05@gmail.com</p>
                     </a>
-                <p><i class="fa-solid fa-phone"></i>+9181254 66221</p>
-                <!-------Social icons-------------->
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/keerthi-gurivelli-969a54268/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/keerthi93-s/"><i class="fa-brands fa-github"></i></a>
+                    <p><i class="fa-solid fa-phone"></i>+9181254 66221</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/keerthi-gurivelli-969a54268/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/keerthi93-s/"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="./GURIVELLI_KEERTHI_RESUME.pdf" Download class="btn btn2">Download CV </a>
                 </div>
-
-                <!--------------Resume ----------->
-                <a href="./GURIVELLI_KEERTHI_RESUME.pdf" Download class="btn btn2">Download CV </a>
-            </div>
                 <div class="contact-right">
-                <!------------- contact form----------------->
                     <form id="myForm" name="submit-to-google-sheet">
                         <input type="hidden" name="access_key" value="c1fcb06b-7de0-4aa5-9efe-bf593e395cbf">
                         <input type="text" name="Name" placeholder="Your Name" required>
@@ -223,53 +306,88 @@
                         <textarea name="Message" id="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
-
-                 <span id="msg"></span>
+                    <span id="msg"></span>
                 </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scroll-indicator-contact">
+            <span>Scroll to explore</span>
+            <div class="scroll-dot"></div>
+        </div>
+        <div class="copyright">
         </div>
     </div>
 
-
-    <div class="copyright">
-        
-    </div>
-</div>
-
-<!--------------------javascript------->
-<script>
-    document.getElementById('contactLink').addEventListener('click', function (event) {
-        event.preventDefault(); // Prevent the default action of following the link
-        window.location.href = 'mailto:keerthigurivelli05@gmail.com'; // Open the mailto link
+    <!-- Scripts and JS -->
+    <script>
+        document.getElementById('contactLink').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = 'mailto:keerthigurivelli05@gmail.com';
+        });
+    </script>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+    <script>
+        // Hide/show scroll indicators based on scroll position
+        function handleScrollIndicators() {
+            const indicators = [
+                {id: 'scroll-indicator-hero', section: 'header'},
+                {id: 'scroll-indicator-experience', section: 'experience'},
+                {id: 'scroll-indicator-projects', section: 'projects'},
+                {id: 'scroll-indicator-certifications', section: 'certifications'},
+                {id: 'scroll-indicator-contact', section: 'contact'}
+            ];
+            const scrollY = window.scrollY;
+            const windowHeight = window.innerHeight;
+            indicators.forEach(({id, section}) => {
+                const el = document.getElementById(id);
+                const sectionEl = document.getElementById(section);
+                if (!el || !sectionEl) return;
+                const rect = sectionEl.getBoundingClientRect();
+                // Show indicator only if section is at the top of viewport
+                if (rect.top >= 0 && rect.top < windowHeight * 0.2) {
+                    el.style.display = 'flex';
+                } else {
+                    el.style.display = 'none';
+                }
+            });
+        }
+        window.addEventListener('scroll', handleScrollIndicators);
+        window.addEventListener('resize', handleScrollIndicators);
+        document.addEventListener('DOMContentLoaded', handleScrollIndicators);
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Replace the tagline after the DOM is loaded
+        var headerText = document.querySelector('.header-text');
+        if(headerText) {
+            var tagline = document.createElement('div');
+            tagline.className = 'hero-tagline';
+            tagline.textContent = 'Transforming ideas into scalable, elegant web solutions';
+            headerText.appendChild(tagline);
+        }
     });
-</script>
-
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname){
-    for(tablink of tablinks){
-        tablink.classList.remove("active-link");
-    }
-    for(tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tab");
-    }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
-    }
-
-</script>
-
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu(){
-        sidemenu.style.right="0";
-    }
-    function closemenu(){
-        closemenu.style.right="-200";
-    }
-</script>
-
-
+    </script>
 </body>
 </html>
